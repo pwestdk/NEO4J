@@ -94,4 +94,4 @@ My Java project is created within NetBeans. It is a maven project so it can be r
 
 #### Conclusion
 
-The above execution time does not tell the whole story. SQL is great when the database is smaller and not very complex, but when analysing big amounts of data SQL is not the way to go. My results vary a lot, this is because I have been using as explained above the smaller datasets. If I would have been using the bigger datasets Neo4j would have been a lot faster than SQL because it better at working with nodes and it is a much better tool for analytics. 
+The above execution time does not tell the whole story. SQL is great when the database is smaller and not very complex, but when analysing big amounts of data SQL is not the way to go. My results vary a lot, this is because I have been using as explained above the smaller datasets. If I would have been using the bigger datasets Neo4j would have been a lot faster than SQL because it better at working with nodes and it is a much better tool for analytics. I hope that me attemting to solve the assignment using the smaller datasets proves that I have tried. 
