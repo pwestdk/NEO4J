@@ -79,11 +79,11 @@ My Java project is created within NetBeans. It is a maven project so it can be r
 #### Execution time
 
 ##### --- SQL ---
-###### Endorses 1 - 27645887
-###### Endorses 2 - 6798992
-###### Endorses 3 - 13807487
-###### Endorses 4 - 54740417
-###### Endorses 5 - 317840007
+- Endorses 1 - 27645887
+- Endorses 2 - 6798992
+- Endorses 3 - 13807487
+- Endorses 4 - 54740417
+- Endorses 5 - 317840007
 
 --- NEO ---
 Endorses 1 - 53151844
