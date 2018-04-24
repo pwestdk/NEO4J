@@ -6,7 +6,7 @@
 
 #### 2: Import the data from the social network (endorsement graph https://github.com/datsoftlyngby/soft2018spring-databases-teaching-material/raw/master/data/archive_graph.tar.gz) into a Neo4j database and into an SQL database respectively. 
 
-- Write here
+- Unfortuantly after spending many hours trying to get get large CSV file to work within Neo4j i decided to contiune the assignment using the small version of the files. Therefore I have choosen to use the two smaller CSV files in both SQL and Neo4j. I did this because otherwise I would have been stuck with the assignment. 
 
 #### 3: Construct queries in SQL and in Cypher, which find
 
@@ -23,10 +23,62 @@ Cypher:
 MATCH (:Person {name: '${name}'})-[:ENDORSES]->(other) RETURN distinct other
 
 - all persons that are endorsed by endorsed persons of a person, i.e., endorsements of depth two.
+
+SQL:
+
+SELECT name, node_id FROM nodes WHERE node_id IN \n"
+                + "(SELECT endorses FROM edges WHERE id IN\n"
+                + "(SELECT endorses FROM edges WHERE id IN \n"
+                + "(SELECT node_id FROM nodes WHERE name = 'Odessa Satmary')))
+
+Cypher: 
+
+MATCH (:Person {name: '${name}' })-[:ENDORSES]->()-[:ENDORSES]->(other_other) RETURN distinct other_other
+
 - endorsements of depth three.
+
+SQL:
+
+SELECT name, node_id FROM nodes WHERE node_id IN \n"
+                + "(SELECT endorses FROM edges WHERE id IN\n"
+                + "(SELECT endorses FROM edges WHERE id IN \n"
+                + "(SELECT endorses FROM edges WHERE id IN \n"
+                + "(SELECT node_id FROM nodes WHERE name = 'Odessa Satmary'))))
+
+Cypher: 
+
+MATCH (:Person {name: '${name}' })-[:ENDORSES]->()-[:ENDORSES]->()-[:ENDORSES]->(other) RETURN distinct other
+
 - endorsements of depth four.
+
+SQL:
+
+SELECT name, node_id FROM nodes WHERE node_id IN \n"
+                + "(SELECT endorses FROM edges WHERE id IN\n"
+                + "(SELECT endorses FROM edges WHERE id IN \n"
+                + "(SELECT endorses FROM edges WHERE id IN \n"
+                + "(SELECT endorses FROM edges WHERE id IN \n"
+                + "(SELECT node_id FROM nodes WHERE name = 'Odessa Satmary')))))
+
+Cypher: 
+
+MATCH (:Person {name: '${name}' })-[:ENDORSES]->()-[:ENDORSES]->()-[:ENDORSES]->()-[:ENDORSES]->(other) RETURN distinct other
+
 - endorsements of depth five.
 
+SQL:
+
+SELECT name, node_id FROM nodes WHERE node_id IN \n"
+                + "(SELECT endorses FROM edges WHERE id IN\n"
+                + "(SELECT endorses FROM edges WHERE id IN \n"
+                + "(SELECT endorses FROM edges WHERE id IN \n"
+                + "(SELECT endorses FROM edges WHERE id IN \n"
+                + "(SELECT endorses FROM edges WHERE id IN \n"
+                + "(SELECT node_id FROM nodes WHERE name = 'Odessa Satmary'))))))
+
+Cypher: 
+
+MATCH (:Person {name: '${name}' })-[:ENDORSES]->()-[:ENDORSES]->()-[:ENDORSES]->()-[:ENDORSES]->()-[:ENDORSES]->(other) RETURN distinct other
 
 #### 4: Write a program in a programming language of your choice, such as Java, C#, etc., where the program executes the above queries for twenty random nodes against the two respective databases. That is, you run each query on the same twenty random nodes.
 
