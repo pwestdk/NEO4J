@@ -86,11 +86,11 @@ My Java project is created within NetBeans. It is a maven project so it can be r
 - Endorses 5 - 317840007
 
 --- NEO ---
-Endorses 1 - 53151844
-Endorses 2 - 26416422
-Endorses 3 - 28618175
-Endorses 4 - 25014596
-Endorses 5 - 22651784
+- Endorses 1 - 53151844
+- Endorses 2 - 26416422
+- Endorses 3 - 28618175
+- Endorses 4 - 25014596
+- Endorses 5 - 22651784
 
 #### Conclusion
 
