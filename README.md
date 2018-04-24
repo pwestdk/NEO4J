@@ -76,14 +76,14 @@ I have imported the CSV files to Neo4j using the "LOAD CSV" command within Neo4J
 
 My Java project is created within NetBeans. It is a maven project so it can be run on any system. 
 
-##### Execution time
+#### Execution time
 
---- SQL ---
-Endorses 1 - 27645887
-Endorses 2 - 6798992
-Endorses 3 - 13807487
-Endorses 4 - 54740417
-Endorses 5 - 317840007
+##### --- SQL ---
+###### Endorses 1 - 27645887
+###### Endorses 2 - 6798992
+###### Endorses 3 - 13807487
+###### Endorses 4 - 54740417
+###### Endorses 5 - 317840007
 
 --- NEO ---
 Endorses 1 - 53151844
@@ -92,6 +92,6 @@ Endorses 3 - 28618175
 Endorses 4 - 25014596
 Endorses 5 - 22651784
 
-##### Conclusion
+#### Conclusion
 
 The above execution time does not tell the whole story. SQL is great when the database is smaller and not very complex, but when analysing big amounts of data SQL is not the way to go. My results vary a lot, this is because I have been using as explained above the smaller datasets. If I would have been using the bigger datasets Neo4j would have been a lot faster than SQL because it better at working with nodes and it is a much better tool for analytics. 
