@@ -10,7 +10,7 @@
 
 #### 3: Construct queries in SQL and in Cypher, which find
 
-- all persons that a person endorses, i.e., endorsements of depth one.
+##### - all persons that a person endorses, i.e., endorsements of depth one.
 
 SQL: 
 
