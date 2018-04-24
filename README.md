@@ -66,11 +66,17 @@ Cypher - MATCH (:Person {name: '${name}' })-[:ENDORSES]->()-[:ENDORSES]->()-[:EN
 
 #### 5: Extend your program, so that it measures the average and median execution times of each query. That is, you run a benchmark for the two databases.
 
+- See program within github. 
+
 #### 6: You collect your measurement results and present them with an evaluation of your experiment in a Markdown file in a repository on Github. That is, you hand in this assignment via Github.
 
 ###### - Describe the setup of your experiment. That is, what does someone has to do/install/setup to reproduce your experiment?
 
-Written here
+Because of using the smaller CSV files i have used the "Table Data Import Wizard" within MySQL Workbench to import the CSV files. This theoretically would have been possible if I were to use the larger files but it would most likely take up to 6-12 hours. If I were to use the larger file I would have used the SQL-query decribed on the hand-in paper. 
+
+I have imported the CSV files to Neo4j using the "LOAD CSV" command within Neo4J. 
+
+My Java project is created within NetBeans. It is a maven project so it can be run on any system. 
 
 ###### - Present the execution time of each query each of the 20 random nodes/persons per database.
 ###### - Present the average and the median runtime of each of the queries per database.
